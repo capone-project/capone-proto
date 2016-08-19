@@ -21,9 +21,8 @@ message ServiceDescription {
 }
 
 message CapabilityMessage {
-    required uint32 objectid = 1;
-    required uint32 rights = 2;
-    required bytes secret = 3;
+    required uint32 rights = 1;
+    required bytes secret = 2;
 }
 
 message SessionRequestMessage {
@@ -32,16 +31,19 @@ message SessionRequestMessage {
 }
 
 message SessionMessage {
-    required CapabilityMessage invoker_cap = 1;
-    required CapabilityMessage requester_cap = 2;
+    required uint32 identifier = 1;
+    required CapabilityMessage invoker_cap = 2;
+    required CapabilityMessage requester_cap = 3;
 }
 
 message SessionInitiationMessage {
-    required CapabilityMessage capability = 1;
+    required uint32 identifier = 1;
+    required CapabilityMessage capability = 2;
 }
 
 message SessionTerminationMessage {
-    required CapabilityMessage capability = 1;
+    required uint32 identifier = 1;
+    required CapabilityMessage capability = 2;
 }
 
 message SessionResult {
