@@ -21,8 +21,12 @@ message ServiceDescription {
 }
 
 message CapabilityMessage {
-    required uint32 rights = 1;
-    required bytes secret = 2;
+    message Chain {
+        required uint32 rights = 1;
+        required bytes entity = 2;
+    }
+    required bytes secret = 1;
+    repeated Chain chain = 2;
 }
 
 message SessionRequestMessage {
