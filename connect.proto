@@ -31,13 +31,11 @@ message CapabilityMessage {
 
 message SessionRequestMessage {
     repeated string parameters = 1;
-    required bytes invoker = 2;
 }
 
 message SessionMessage {
     required uint32 identifier = 1;
-    required CapabilityMessage invoker_cap = 2;
-    required CapabilityMessage requester_cap = 3;
+    required CapabilityMessage cap = 3;
 }
 
 message SessionInitiationMessage {
