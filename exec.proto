@@ -1,0 +1,6 @@
+syntax = "proto2";
+
+message ExecParams {
+    required string command = 1;
+    repeated string arguments = 2;
+}
