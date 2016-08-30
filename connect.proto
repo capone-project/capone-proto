@@ -1,5 +1,9 @@
 syntax = "proto2";
 
+message SignatureKey {
+    required bytes data = 1;
+}
+
 message ConnectionInitiationMessage {
     enum Type {
         QUERY = 0;
@@ -23,7 +27,7 @@ message ServiceDescription {
 message CapabilityMessage {
     message Chain {
         required uint32 rights = 1;
-        required bytes entity = 2;
+        required SignatureKey entity = 2;
     }
     required bytes secret = 1;
     repeated Chain chain = 2;
