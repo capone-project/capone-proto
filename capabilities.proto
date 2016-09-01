@@ -7,8 +7,9 @@ message CapabilitiesParams {
         required SignatureKey requested_identity = 1;
         required SignatureKey service_identity = 2;
 
-        required string service_address = 4;
-        required string service_port = 5;
+        required string service_address = 3;
+        required string service_port = 4;
+        required string service_type = 5;
         repeated string parameters = 6;
     }
     enum Type {
@@ -26,8 +27,9 @@ message CapabilityRequest {
 
     required string service_address = 3;
     required string service_port = 4;
-    repeated string parameters = 5;
-    required uint32 requestid = 6;
+    required string service_type = 5;
+    repeated string parameters = 6;
+    required uint32 requestid = 7;
 }
 
 message Capability {

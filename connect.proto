@@ -34,7 +34,7 @@ message CapabilityMessage {
 }
 
 message SessionRequestMessage {
-    repeated string parameters = 1;
+    required bytes parameters = 1;
 }
 
 message SessionMessage {
