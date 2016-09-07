@@ -21,15 +21,24 @@ message CapabilitiesParams {
     optional RequestParams request_params = 2;
 }
 
-message CapabilityRequest {
+message CapabilitiesRequest {
     required SignatureKey requester_identity = 1;
     required SignatureKey service_identity = 2;
-
     required string service_address = 3;
     required string service_port = 4;
     required string service_type = 5;
     repeated string parameters = 6;
     required uint32 requestid = 7;
+}
+
+message CapabilitiesCommand {
+    enum Command {
+        REQUEST = 1;
+        TERMINATE = 2;
+    }
+
+    required Command cmd = 1;
+    optional CapabilitiesRequest request = 2;
 }
 
 message Capability {
