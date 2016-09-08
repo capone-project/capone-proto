@@ -10,7 +10,7 @@ message CapabilitiesParams {
         required string service_address = 3;
         required string service_port = 4;
         required string service_type = 5;
-        repeated string parameters = 6;
+        required bytes parameters = 6;
     }
     enum Type {
         REQUEST = 1;
@@ -27,7 +27,7 @@ message CapabilitiesRequest {
     required string service_address = 3;
     required string service_port = 4;
     required string service_type = 5;
-    repeated string parameters = 6;
+    required bytes parameters = 6;
     required uint32 requestid = 7;
 }
 
