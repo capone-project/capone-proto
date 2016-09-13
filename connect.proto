@@ -54,4 +54,5 @@ message SessionTerminationMessage {
 
 message SessionResult {
     required uint32 result = 1;
+    optional bytes parameters = 2;
 }
