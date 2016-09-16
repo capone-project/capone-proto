@@ -10,5 +10,4 @@ message InvokeParams {
     required string service_address = 4;
     required string service_port = 5;
     required string service_type = 6;
-    repeated string service_parameters = 7;
 }
