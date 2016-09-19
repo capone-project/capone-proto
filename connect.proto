@@ -35,17 +35,17 @@ message SessionRequestResult {
     required CapabilityMessage cap = 3;
 }
 
-message SessionInitiationMessage {
+message SessionConnectMessage {
     required uint32 identifier = 1;
     required CapabilityMessage capability = 2;
+}
+
+message SessionConnectResult {
+    required uint32 result = 1;
+    optional bytes parameters = 2;
 }
 
 message SessionTerminationMessage {
     required uint32 identifier = 1;
     required CapabilityMessage capability = 2;
-}
-
-message SessionResult {
-    required uint32 result = 1;
-    optional bytes parameters = 2;
 }
