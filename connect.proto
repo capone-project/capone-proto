@@ -13,7 +13,11 @@ message ConnectionInitiationMessage {
     required Type type = 1;
 }
 
-message ServiceDescription {
+message ServiceQueryMessage {
+    required string version = 1;
+}
+
+message ServiceQueryResult {
     required string name = 1;
     required string category = 2;
     required string type = 3;
