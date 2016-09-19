@@ -1,5 +1,7 @@
 syntax = "proto2";
 
+import "core.proto";
+
 message AnnounceMessage {
     message Service {
         required string name = 1;
@@ -9,7 +11,7 @@ message AnnounceMessage {
 
     required string version = 1;
     required string name = 2;
-    required bytes sign_key = 3;
+    required SignatureKeyMessage sign_key = 3;
     repeated Service services = 4;
 }
 
