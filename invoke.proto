@@ -6,7 +6,7 @@ message InvokeParams {
     required uint32 sessionid = 1;
     required CapabilityMessage cap = 2;
 
-    required SignatureKey service_identity = 3;
+    required SignatureKeyMessage service_identity = 3;
     required string service_address = 4;
     required string service_port = 5;
     required string service_type = 6;

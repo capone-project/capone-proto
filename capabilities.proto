@@ -4,8 +4,8 @@ import "core.proto";
 
 message CapabilitiesParams {
     message RequestParams {
-        required SignatureKey requested_identity = 1;
-        required SignatureKey service_identity = 2;
+        required SignatureKeyMessage requested_identity = 1;
+        required SignatureKeyMessage service_identity = 2;
 
         required string service_address = 3;
         required string service_port = 4;
@@ -22,8 +22,8 @@ message CapabilitiesParams {
 }
 
 message CapabilitiesRequest {
-    required SignatureKey requester_identity = 1;
-    required SignatureKey service_identity = 2;
+    required SignatureKeyMessage requester_identity = 1;
+    required SignatureKeyMessage service_identity = 2;
     required string service_address = 3;
     required string service_port = 4;
     required string service_type = 5;
@@ -42,7 +42,7 @@ message CapabilitiesCommand {
 }
 
 message Capability {
-    required SignatureKey service_identity = 1;
+    required SignatureKeyMessage service_identity = 1;
     required uint32 requestid = 2;
     required uint32 sessionid = 3;
     required CapabilityMessage capability = 4;
