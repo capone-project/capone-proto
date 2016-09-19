@@ -1,8 +1,6 @@
 syntax = "proto2";
 
-message SignatureKey {
-    required bytes data = 1;
-}
+import "core.proto";
 
 message ConnectionInitiationMessage {
     enum Type {
@@ -22,15 +20,6 @@ message ServiceDescription {
     required string version = 4;
     required string location = 5;
     required string port = 6;
-}
-
-message CapabilityMessage {
-    message Chain {
-        required uint32 rights = 1;
-        required SignatureKey entity = 2;
-    }
-    required bytes secret = 1;
-    repeated Chain chain = 2;
 }
 
 message SessionRequestMessage {

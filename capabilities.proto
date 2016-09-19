@@ -1,6 +1,6 @@
 syntax = "proto2";
 
-import "connect.proto";
+import "core.proto";
 
 message CapabilitiesParams {
     message RequestParams {
