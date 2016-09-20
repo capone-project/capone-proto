@@ -30,7 +30,7 @@ message SessionRequestMessage {
     required bytes parameters = 1;
 }
 
-message SessionMessage {
+message SessionRequestResult {
     required uint32 identifier = 1;
     required CapabilityMessage cap = 3;
 }
