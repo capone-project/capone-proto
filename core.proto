@@ -1,5 +1,17 @@
 syntax = "proto2";
 
+message ErrorMessage {
+    enum ErrorCode {
+        EUNKNOWN = 0;
+        EINVAL = 1;
+        EACCESS = 2;
+        EPERM = 3;
+        ENOTFOUND = 4;
+    }
+
+    required ErrorCode code = 1;
+}
+
 message SignatureKeyMessage {
     required bytes data = 1;
 }
