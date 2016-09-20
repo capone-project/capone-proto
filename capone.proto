@@ -51,3 +51,7 @@ message SessionTerminationMessage {
     required uint32 identifier = 1;
     required CapabilityMessage capability = 2;
 }
+
+message SessionTerminationResult {
+    optional ErrorMessage error = 1;
+}
