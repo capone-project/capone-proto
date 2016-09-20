@@ -18,12 +18,13 @@ message ServiceQueryMessage {
 }
 
 message ServiceQueryResult {
-    required string name = 1;
-    required string category = 2;
-    required string type = 3;
-    required string version = 4;
-    required string location = 5;
-    required string port = 6;
+    optional ErrorMessage error = 1;
+    required string name = 2;
+    required string category = 3;
+    required string type = 4;
+    required string version = 5;
+    required string location = 6;
+    required string port = 7;
 }
 
 message SessionRequestMessage {

@@ -7,6 +7,7 @@ message ErrorMessage {
         EACCESS = 2;
         EPERM = 3;
         ENOTFOUND = 4;
+        EVERSION = 5;
     }
 
     required ErrorCode code = 1;
