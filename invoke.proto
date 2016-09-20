@@ -8,6 +8,6 @@ message InvokeParams {
 
     required SignatureKeyMessage service_identity = 3;
     required string service_address = 4;
-    required string service_port = 5;
+    required uint32 service_port = 5;
     required string service_type = 6;
 }
