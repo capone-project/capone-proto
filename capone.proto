@@ -14,7 +14,7 @@ message ConnectionInitiationMessage {
 }
 
 message ServiceQueryMessage {
-    required string version = 1;
+    required uint32 version = 1;
 }
 
 message ServiceQueryResult {
@@ -28,7 +28,8 @@ message ServiceQueryResult {
 }
 
 message SessionRequestMessage {
-    required bytes parameters = 1;
+    required uint32 version = 1;
+    required bytes parameters = 2;
 }
 
 message SessionRequestResult {
@@ -38,8 +39,9 @@ message SessionRequestResult {
 }
 
 message SessionConnectMessage {
-    required uint32 identifier = 1;
-    required CapabilityMessage capability = 2;
+    required uint32 version = 1;
+    required uint32 identifier = 2;
+    required CapabilityMessage capability = 3;
 }
 
 message SessionConnectResult {
@@ -48,8 +50,9 @@ message SessionConnectResult {
 }
 
 message SessionTerminationMessage {
-    required uint32 identifier = 1;
-    required CapabilityMessage capability = 2;
+    required uint32 version = 1;
+    required uint32 identifier = 2;
+    required CapabilityMessage capability = 3;
 }
 
 message SessionTerminationResult {

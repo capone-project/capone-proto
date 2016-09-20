@@ -3,7 +3,7 @@ syntax = "proto2";
 import "core.proto";
 
 message DiscoverMessage {
-    required string version = 1;
+    required uint32 version = 1;
     repeated bytes known_keys = 2;
 }
 
@@ -14,7 +14,7 @@ message DiscoverResult {
         required string port = 3;
     }
 
-    required string version = 1;
+    required uint32 version = 1;
     required string name = 2;
     required SignatureKeyMessage sign_key = 3;
     repeated Service services = 4;
