@@ -1,19 +1,21 @@
 syntax = "proto2";
 
-message AnnounceMessage {
+import "core.proto";
+
+message DiscoverMessage {
+    required uint32 version = 1;
+    repeated bytes known_keys = 2;
+}
+
+message DiscoverResult {
     message Service {
         required string name = 1;
         required string category = 2;
         required string port = 3;
     }
 
-    required string version = 1;
+    required uint32 version = 1;
     required string name = 2;
-    required bytes sign_key = 3;
+    required SignatureKeyMessage sign_key = 3;
     repeated Service services = 4;
-}
-
-message DiscoverMessage {
-    required string version = 1;
-    repeated bytes known_keys = 2;
 }

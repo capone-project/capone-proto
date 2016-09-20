@@ -1,0 +1,27 @@
+syntax = "proto2";
+
+message ErrorMessage {
+    enum ErrorCode {
+        EUNKNOWN = 0;
+        EINVAL = 1;
+        EACCESS = 2;
+        EPERM = 3;
+        ENOTFOUND = 4;
+        EVERSION = 5;
+    }
+
+    required ErrorCode code = 1;
+}
+
+message SignatureKeyMessage {
+    required bytes data = 1;
+}
+
+message CapabilityMessage {
+    message Chain {
+        required uint32 rights = 1;
+        required SignatureKeyMessage entity = 2;
+    }
+    required bytes secret = 1;
+    repeated Chain chain = 2;
+}
