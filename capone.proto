@@ -24,7 +24,7 @@ message ServiceQueryResult {
     required string type = 4;
     required string version = 5;
     required string location = 6;
-    required string port = 7;
+    required uint32 port = 7;
 }
 
 message SessionRequestMessage {

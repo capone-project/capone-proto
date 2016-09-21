@@ -8,7 +8,7 @@ message CapabilitiesParams {
         required SignatureKeyMessage service_identity = 2;
 
         required string service_address = 3;
-        required string service_port = 4;
+        required uint32 service_port = 4;
         required string service_type = 5;
         required bytes parameters = 6;
     }
@@ -25,7 +25,7 @@ message CapabilitiesRequest {
     required SignatureKeyMessage requester_identity = 1;
     required SignatureKeyMessage service_identity = 2;
     required string service_address = 3;
-    required string service_port = 4;
+    required uint32 service_port = 4;
     required string service_type = 5;
     required bytes parameters = 6;
     required uint32 requestid = 7;
