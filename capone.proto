@@ -48,8 +48,11 @@ message SessionConnectMessage {
 }
 
 message SessionConnectResult {
+    message Result {
+        required bytes parameters = 1;
+    }
     optional ErrorMessage error = 1;
-    optional bytes parameters = 2;
+    optional Result result = 2;
 }
 
 message SessionTerminationMessage {
