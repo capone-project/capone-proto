@@ -18,13 +18,16 @@ message ServiceQueryMessage {
 }
 
 message ServiceQueryResult {
+    message Result {
+        required string name = 1;
+        required string category = 2;
+        required string type = 3;
+        required string version = 4;
+        required string location = 5;
+        required uint32 port = 6;
+    }
     optional ErrorMessage error = 1;
-    required string name = 2;
-    required string category = 3;
-    required string type = 4;
-    required string version = 5;
-    required string location = 6;
-    required uint32 port = 7;
+    optional Result result = 2;
 }
 
 message SessionRequestMessage {
@@ -33,9 +36,12 @@ message SessionRequestMessage {
 }
 
 message SessionRequestResult {
+    message Result {
+        required uint32 identifier = 1;
+        required CapabilityMessage cap = 2;
+    }
     optional ErrorMessage error = 1;
-    required uint32 identifier = 2;
-    required CapabilityMessage cap = 3;
+    optional Result result = 2;
 }
 
 message SessionConnectMessage {
@@ -45,8 +51,11 @@ message SessionConnectMessage {
 }
 
 message SessionConnectResult {
+    message Result {
+        required bytes parameters = 1;
+    }
     optional ErrorMessage error = 1;
-    optional bytes parameters = 2;
+    optional Result result = 2;
 }
 
 message SessionTerminationMessage {
