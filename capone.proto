@@ -33,9 +33,12 @@ message SessionRequestMessage {
 }
 
 message SessionRequestResult {
+    message Result {
+        required uint32 identifier = 1;
+        required CapabilityMessage cap = 2;
+    }
     optional ErrorMessage error = 1;
-    required uint32 identifier = 2;
-    required CapabilityMessage cap = 3;
+    optional Result result = 2;
 }
 
 message SessionConnectMessage {
