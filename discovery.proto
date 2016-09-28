@@ -16,6 +16,6 @@ message DiscoverResult {
 
     required uint32 version = 1;
     required string name = 2;
-    required SignatureKeyMessage sign_key = 3;
+    required IdentityMessage identity = 3;
     repeated Service services = 4;
 }
