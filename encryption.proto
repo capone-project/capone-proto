@@ -1,20 +1,14 @@
 syntax = "proto2";
 
-message InitiatorKey {
-    required bytes sign_pk = 1;
-    required bytes ephm_pk = 2;
-    required uint32 sessionid = 3;
+import "core.proto";
+
+message EncryptionInitiationMessage {
+    required IdentityMessage identity = 1;
+    required PublicKeyMessage ephemeral = 2;
 }
 
-message ResponderKey {
-    required bytes sign_pk = 1;
-    required bytes ephm_pk = 2;
-    required uint32 sessionid = 3;
-    required bytes signature = 4;
-}
-
-message AcknowledgeKey {
-    required bytes sign_pk = 1;
-    required uint32 sessionid = 2;
+message EncryptionAcknowledgementMessage {
+    required IdentityMessage identity = 1;
+    required PublicKeyMessage ephemeral = 2;
     required bytes signature = 3;
 }
