@@ -1,12 +1,12 @@
 syntax = "proto2";
 
-message InitiatorKey {
+message EncryptionInitiationMessage {
     required bytes sign_pk = 1;
     required bytes ephm_pk = 2;
     required uint32 sessionid = 3;
 }
 
-message ResponderKey {
+message EncryptionAcknowledgementMessage {
     required bytes sign_pk = 1;
     required bytes ephm_pk = 2;
     required uint32 sessionid = 3;
