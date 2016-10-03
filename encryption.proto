@@ -5,12 +5,10 @@ import "core.proto";
 message EncryptionInitiationMessage {
     required IdentityMessage identity = 1;
     required PublicKeyMessage ephemeral = 2;
-    required uint32 sessionid = 3;
 }
 
 message EncryptionAcknowledgementMessage {
     required IdentityMessage identity = 1;
     required PublicKeyMessage ephemeral = 2;
-    required uint32 sessionid = 3;
-    required bytes signature = 4;
+    required bytes signature = 3;
 }
