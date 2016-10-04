@@ -22,7 +22,7 @@ message ServiceQueryResult {
         required string name = 1;
         required string category = 2;
         required string type = 3;
-        required string version = 4;
+        required uint32 version = 4;
         required string location = 5;
         required uint32 port = 6;
     }
