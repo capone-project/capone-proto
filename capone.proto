@@ -47,7 +47,9 @@ message SessionRequestResult {
 message SessionConnectMessage {
     required uint32 version = 1;
     required uint32 identifier = 2;
-    required CapabilityMessage capability = 3;
+    required string service_type = 3;
+    required uint32 service_version = 4;
+    required CapabilityMessage capability = 5;
 }
 
 message SessionConnectResult {
