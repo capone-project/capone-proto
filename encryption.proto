@@ -10,5 +10,5 @@ message EncryptionInitiationMessage {
 message EncryptionAcknowledgementMessage {
     required IdentityMessage identity = 1;
     required PublicKeyMessage ephemeral = 2;
-    required bytes signature = 3;
+    required SignatureMessage signature = 3;
 }
