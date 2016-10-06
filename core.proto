@@ -17,6 +17,10 @@ message IdentityMessage {
     required bytes data = 1;
 }
 
+message SignatureMessage {
+    required bytes data = 1;
+}
+
 message PublicKeyMessage {
     required bytes data = 1;
 }
